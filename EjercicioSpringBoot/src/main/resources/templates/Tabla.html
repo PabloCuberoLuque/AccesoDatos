@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla</title>
+</head>
+<body>
+  <table>
+    <thead>
+    <tr>
+      <th th:text="${columna1}">Columna 1</th>
+      <th th:text="${columna2}">Columna 2</th>
+      <th th:text="${columna3}">Columna 3</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td th:text="${fila1}">Celda 1</td>
+      <td th:text="${fila2}">Celda 2</td>
+      <td th:text="${fila3}">Celda 3</td>
+    </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
