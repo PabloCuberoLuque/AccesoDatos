@@ -1,26 +1,30 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="es">
 <head>
+    <title>Formulario</title>
     <meta charset="UTF-8">
-    <title>Creacion de un alumno</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<h1>Alumno</h1>
-
-<form  method="post" th:action="{/addAlumno}">
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre"  th:field="*{nombre}">
-
-    <label for="apellido">Apellido:</label>
-    <input type="text" id="apellido"  th:field="*{apellido}">
-
-    <label for="edad">Edad:</label>
-    <input type="number" id="edad"  th:field="*{edad}">
-
-    <label for="dni">DNI:</label>
-    <input type="text" id="dni"  th:field="*{dni}">
-
-    <button type="submit">Agregar Alumno</button>
+<form action="" method="post" th:object="${alumno}">
+    <div>
+        <label for="nombre">Nombre</label>
+        <input id="nombre" type="text" th:field="*{nombre}">
+    </div>
+    <div>
+        <label for="apellidos">Apellido</label>
+        <input id="apellidos" type="text" th:field="*{apellidos}">
+    </div>
+    <div>
+        <label for="edad">Edad</label>
+        <input id="edad" type="number" th:field="*{edad}">
+    </div>
+    <div>
+        <label for="dni">DNI</label>
+        <input id="dni" type="text" th:field="*{dni}">
+    </div>
+    <button>Guardar</button>
 </form>
+
 </body>
 </html>

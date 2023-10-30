@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
     <title>Lista de Alumnos</title>
 </head>
 <body>
-<h1>Lista de Alumnos</h1>
-
-<table>
+<h1>CLASE 2º DAM</h1>
+<table border="1">
     <thead>
     <tr>
-        <th>Id</th>
+        <th>ID</th>
         <th>Nombre</th>
         <th>Apellido</th>
         <th>Edad</th>
@@ -18,17 +16,14 @@
     </tr>
     </thead>
     <tbody>
-
     <tr th:each="alumno : ${alumnos}">
         <td th:text="${alumno.id}"></td>
         <td th:text="${alumno.nombre}"></td>
-        <td th:text="${alumno.apellido}"></td>
+        <td th:text="${alumno.apellidos}"></td>
         <td th:text="${alumno.edad}"></td>
         <td th:text="${alumno.dni}"></td>
     </tr>
-    </tbody>
 </table>
-
-<a th:href="@{/formulario}">Añadir Nuevo Alumno</a>
+<p><a th:href="@{/nuevo}">Añadir Nuevo Alumno</a></p>
 </body>
 </html>
