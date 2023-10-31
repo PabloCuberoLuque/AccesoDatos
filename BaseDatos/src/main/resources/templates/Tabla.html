@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sd="http://www.w3.org/1999/xhtml"
+      xmlns:ad="http://www.w3.org/1999/xhtml">
 <head>
     <title>Lista de Alumnos</title>
 </head>
@@ -12,7 +13,7 @@
         <th>Nombre</th>
         <th>Apellido</th>
         <th>Edad</th>
-        <th>DNI</th>
+        <th>DNI</th >
     </tr>
     </thead>
     <tbody>
@@ -24,6 +25,13 @@
         <td th:text="${alumno.dni}"></td>
     </tr>
 </table>
+<nav>
+    <ul
+            class="pagination" sd:pagination="aligned-links">
+    </ul>
+</nav>
+
+
 <p><a th:href="@{/nuevo}">Añadir Nuevo Alumno</a></p>
 </body>
 </html>
